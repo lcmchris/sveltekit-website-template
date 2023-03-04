@@ -1,0 +1,425 @@
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --trans-factor: 0.25;
+
+
+  --pure-white: #ffffff;
+  --pure-black: #000000;
+  --off-white: #f5f5f5;
+  --alice-blue: #FAFBFC;
+  --solitude: #E0E4EC;
+  --rock-blue: #8D98AA;
+  --manatee: #8D98AA;
+
+  --black-grey: #181818;
+  --elephant-grey: #555555;
+  --pure-grey: #5E5E5E;
+  --grey: #6D6E76;
+  --light-grey: #A7A8AD;
+  --super-light-grey: #F1F1F2;
+  --blended-light: #FFFBE8;
+
+
+  --maliblu: #58abe7;
+  --navy-blue: #0065ff;
+  --alizarin: #d92129;
+
+  --primary: #247ba0;
+  --secondary: #c08497;
+  --tertiary: #0c0a3e;
+
+
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'Inter var';
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+
+li {
+  /* pxove bullets */
+  list-style-type: none;
+
+}
+
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 50px;
+
+}
+
+
+h3.subheading-1 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+h3.subheading-2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-grey);
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+body.alt {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+body.text3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+body.subscript {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+body.button_text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-grey);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--pure-white);
+}
+
+
+label {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+
+
+a:hover:not(.active) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 6px;
+}
+
+a.active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 6px;
+  pointer-events: none
+}
+
+
+.gradient-text {
+  background: linear-gradient(90deg, #FFCF25 20%, #F68E62 40%, var(--secondary) 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 88vh;
+}
+
+
+input {
+  padding: 20px;
+  margin: 10px 0 10px 0;
+  width: calc(100% - 40px);
+  font-size: 18px;
+  color: var(--manatee);
+  border: 1px solid var(--solitude);
+  border-radius: 10px;
+  resize: none;
+  background-color: var(--alice-blue);
+}
+
+input:invalid {
+  color: var(--alizarin);
+}
+
+input:valid {
+  color: var(--secondary);
+}
+
+/* Change the white to any color */
+input:-webkit-autofill {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 50px var(--alice-blue) inset;
+}
+
+/* Animations */
+
+.animate-slide {
+  animation: slide 1.25s ease-in-out;
+}
+
+@keyframes slide {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  70% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-fade {
+  -webkit-animation: fadein 3.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 3.5s;
+  /* Opera < 12.1 */
+  animation: fadein 3.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+section.gradient {
+  background: linear-gradient(-45deg, var(--primary-trans), var(--secondary-trans));
+  background-size: 200% 200%;
+  /* opacity: 0.2; */
+  animation: gradient 20s ease infinite;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  width: 100%;
+  height: 100%;
+}
+
+.content-box.margin {
+  margin: 5vh 5vw 5vh 5vw;
+}
+
+.content-box.row {
+  flex-direction: row;
+}
+
+.responsive-width {
+  width: 40vw;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+  .content-box.row {
+    flex-direction: column;
+  }
+
+  .content-box.unresponsive {
+    flex-direction: row;
+  }
+
+  .content-box.margin {
+    margin: 2vw;
+  }
+
+  section {
+    min-height: calc(88vh - 100px);
+    padding: 50px 0 50px 0;
+  }
+
+  .responsive-width {
+    width: 80vw;
+  }
+
+}
+
+
+.icon {
+  padding: 2px;
+  width: 24px;
+  height: auto;
+  color: var(--base-color-1);
+  fill: var(--base-color-1);
+}
+
+.icon:hover {
+  color: var(--primary);
+  fill: var(--primary);
+  transition: color 0.3s ease-in-out;
+}
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Gives that scrolling effect as the typing happens */
+  animation:
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--primary);
+  }
+}

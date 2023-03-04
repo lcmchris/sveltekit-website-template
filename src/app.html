@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8QHHDQWDH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E8QHHDQWDH');
+  </script>
+
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="%sveltekit.assets%/themes/app.css">
+
+  <link rel="icon" href="%sveltekit.assets%/favicon.svg" />
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="%sveltekit.assets%/themes/code-block.css" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  %sveltekit.head%
+</head>
+
+<!-- there seems to be some css fudgery here where if I dont specify empty class and style it will pickup the `subscript` body class -->
+
+<body data-sveltekit-preload-data="hover" class="" style="">
+  <div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
+
+<style>
+  html,
+  body {
+    overflow-x: hidden;
+  }
+</style>
